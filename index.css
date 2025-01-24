@@ -1,0 +1,257 @@
+body{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+.logo-name{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+.nav-links li{
+    margin-left: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    padding: 8px 12px;
+    color: black;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.nav-links li a:hover{
+    background-color: green;
+    color: white;
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 5px 0;
+    border-radius: 2px;
+}
+#toggle-menu {
+    display: none;
+}
+
+#toggle-menu:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger on mobile */
+    }
+
+    #toggle-menu:checked ~ .nav-links {
+        display: flex; /* Show the links when the hamburger is clicked */
+    }
+}
+.hero{
+    height: 400px;
+    width: 1200px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    margin-left: 130px;
+    margin-top: 30px;
+}
+.hero div{
+    display: flex;
+}
+.hero .intro{
+    float: left;
+}
+.hero .intro img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    margin-left: 0;
+}
+.hero .intro p{
+    margin-left: 20px;
+    padding-top: 30px;
+}
+.hero .photo{
+    float: right;
+}
+.hero .photo img{
+    height: 300px;
+    width: 300px;
+    border-radius: 25px;
+}
+.happy div{
+    display: inline-block;
+    padding-top: 20px;
+}
+.a,.b,.c{
+    margin-left: 140px;
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border: solid black;
+    border-radius: 20px;
+    position: relative;
+}
+.happy .a div{
+    display: inline-block;
+    margin-left: 55px;
+}
+.happy .a img{
+    height: 200px;
+    width: 200px;
+}
+.happy .a a{
+    text-decoration: none;
+    display: block;
+    padding-top: 20px;
+    color: black;
+    font-size: 15px;
+    padding-left: 50px;
+    font-weight: 800;
+}
+.happy .b div{
+    display: inline-block;
+    margin-left: 55px;
+}
+.happy .b img{
+    height: 200px;
+    width: 200px;
+}
+.happy .b a{
+    text-decoration: none;
+    display: block;
+    padding-top: 20px;
+    color: black;
+    font-size: 15px;
+    padding-left: 50px;
+    font-weight: 800;
+}
+.happy .c div{
+    display: inline-block;
+    margin-left: 55px;
+}
+.happy .c img{
+    height: 200px;
+    width: 200px;
+}
+.happy .c a{
+    text-decoration: none;
+    display: block;
+    padding-top: 20px;
+    color: black;
+    font-size: 15px;
+    padding-left: 50px;
+    font-weight: 800;
+}
+.redirect{
+    margin-top: 30px;
+    height: 40px;
+    width: 130px;
+    background-color: green;
+    color: white;
+    margin-left: 700px;
+    border-radius: 4px;
+}
+.redirect a{
+    color: white;
+    text-decoration: none;
+    padding-left: 25px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+footer{
+    margin-top: 20px;
+    padding: 50px 0;
+    background-color: green;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.footer-section h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-section p, .footer-section ul{
+    font-size: 14px;
+    line-height: 1.6;
+}
+.footer-section ul{
+    transition: background-color 0.3s;
+    border-radius: 2px;
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li{
+    margin: 8px 0;
+}
+.footer-section ul li a{
+    text-decoration: none;
+    color: white;
+}
+.footer-section ul li a:hover{
+    color: black;
+    background-color: white;
+}
+.footer-section.social a{
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+.footer-section.social a img{
+    height:40px;
+    width: 50px;
+}
+.footer-section.social a:hover{
+    color: black;
+}
